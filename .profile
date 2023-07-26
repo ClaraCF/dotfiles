@@ -55,6 +55,9 @@ export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
 export ADB_VENDOR_KEYS="${XDG_DATA_HOME}/android"
 export MINISIGN_CONFIG_DIR="${XDG_DATA_HOME}/minisign"
 
+# XDG Base Directory aliases
+alias monerod='monerod --data-dir "$XDG_DATA_HOME"/bitmonero'
+
 
 # Make Qt themes work
 export QT_QPA_PLATFORMTHEME="qt5ct"
