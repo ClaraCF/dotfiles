@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# Use neovim for vim when possible.
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+
+# Improve commands by adding verbosity and confirmation
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -v"
+alias mkdir="mkdir -pv"
+
+# Add color to commands for better output
+alias dmesg='dmesg --color=auto'
+alias grep="grep --color=auto"
+
+# Better commands
+alias sudo="doas"
+
+# Better ls: replace ls for lsd
+alias ls="lsd"
+alias l="ls -l"
+alias la="ls -a"
+alias lla="ls -la"
+alias lt="ls --tree"
+
+# Helper aliases
+alias battery="cat /sys/class/power_supply/BAT?/capacity"
+alias yt="youtube-dl --add-metadata -i"
+alias yta="yt -x -f bestaudio/best"
+
+# Dotfiles
+alias dotfiles='git --git-dir=$HOME/Documents/dotfiles --work-tree=$HOME'
+
+# Portage and Gentoo maintenance
+alias menuconf="pushd /usr/src/linux && sudo make -j$(nproc) menuconfig && popd"
+alias buildkernel="pushd /usr/src/linux \
+	&& sudo make -j$(nproc) \
+	&& sudo make modules_install \
+	&& sudo make install \
+	&& sudo genkernel --luks --lvm --kernel-config=/usr/src/linux/.config --install initramfs \
+	&& sudo grub-mkconfig -o /boot/grub/grub.cfg \
+	&& popd"
