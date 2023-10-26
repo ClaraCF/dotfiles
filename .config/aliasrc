@@ -32,11 +32,5 @@ alias yta="yt -x -f bestaudio/best"
 alias dotfiles='git --git-dir=$HOME/Documents/dotfiles --work-tree=$HOME'
 
 # Portage and Gentoo maintenance
-alias menuconf="pushd /usr/src/linux && sudo make -j$(nproc) menuconfig && popd"
-alias buildkernel="pushd /usr/src/linux \
-	&& sudo make -j$(nproc) \
-	&& sudo make modules_install \
-	&& sudo make install \
-	&& sudo genkernel --luks --lvm --kernel-config=/usr/src/linux/.config --install initramfs \
-	&& sudo grub-mkconfig -o /boot/grub/grub.cfg \
-	&& popd"
+alias menuconf="sudo ~/Documents/scripts/configure_kernel.sh menuconf"
+alias buildkernel="sudo ~/Documents/scripts/configure_kernel.sh buildkernel"
