@@ -47,6 +47,25 @@ return require('packer').startup(function()
     use 'windwp/nvim-autopairs'
     use 'nvim-tree/nvim-tree.lua'
 
+    use {
+        'vimwiki/vimwiki',
+        config = function()
+            vim.g.vimwiki_list = {{
+                path = '~/Documents/Vimwiki',
+                template_path = '~/Documents/Vimwiki/Templates',
+                template_default = 'default',
+                syntax = 'markdown',
+                ext = '.md',
+                path_html = '~/Documents/Vimwiki/HTML',
+                custom_wiki2html = 'vimwiki_markdown',
+                html_filename_parameterization = 1,
+                template_ext = '.tpl',
+            }}
+            vim.g.vimwiki_global_ext = 0
+        end
+    }
+    use 'aspeddro/pandoc.nvim'
+
     -- Languages --
     --> Rust
     use 'simrat39/rust-tools.nvim'

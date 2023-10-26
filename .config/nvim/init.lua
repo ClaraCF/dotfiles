@@ -92,7 +92,7 @@ vim.diagnostic.config({
     signs = true,
     update_in_insert = true,
     underline = true,
-    severity_sort = false,
+    severitysort = false,
     float = {
         border = 'rounded',
         source = 'always',
@@ -175,6 +175,22 @@ require('nvim-treesitter.configs').setup {
   }
 }
 
+
+-- Vimwiki --
+vim.g.vimwiki_list = {{
+    path = '~/Documents/Vimwiki',
+    template_path = '~/Documents/Vimwiki/Templates/wiki/templates',
+    template_default = 'def_template',
+    template_ext = '.html',
+    syntax = 'default',
+    ext = '.wiki',
+    path_html = '~/Documents/Vimwiki/HTML',
+    --custom_wiki2html = '~/.local/share/python/bin/vimwiki_markdown',
+    html_filename_parameterization = 1,
+}}
+vim.g.vimwiki_global_ext = 0
+
 require('opts')
 require('keys')
 
+--require('pandoc').setup()
