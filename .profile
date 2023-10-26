@@ -57,6 +57,7 @@ export MINISIGN_CONFIG_DIR="${XDG_DATA_HOME}/minisign"
 
 # XDG Base Directory aliases
 alias monerod='monerod --data-dir "$XDG_DATA_HOME"/bitmonero'
+alias irssi='irssi --config="$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HOME"/irssi'
 
 
 # Make Qt themes work
@@ -67,4 +68,10 @@ export MOZ_ENABLE_WAYLAND=1	# Firefox
 
 # Fix the Java reparenting issue
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+
+# Keyboard input method
+export XMODIFIERS=@im=fcitx
+export QT_IM_MODULE=fcitx
+export GTK_IM_MODULE=fcitx 
 
