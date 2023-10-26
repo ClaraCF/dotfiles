@@ -26,19 +26,26 @@ output * bg ~/.config/sway/wallpaper fill
 
 ### Idle configuration
  exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
+          timeout 30 'swaylock -f -c 000000' \
           timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f -c 000000'
 
 
 ### Input configuration
-   input "1267:12734:MSFT0001:00_04F3:31BE_Touchpad" {
-       dwt enabled
-       tap enabled
-       natural_scroll enabled
-       middle_emulation enabled
-   }
+input "1267:12734:MSFT0001:00_04F3:31BE_Touchpad" {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+}
 
+# Mouse configuration
+input * {
+    pointer_accel 1
+}
+#input "MSFT0001:00 04F3:31BE Touchpad" {
+#    pointer_accel 0
+#}
 # Set the keyboard layout to Spanish (Spain)
 input * xkb_layout es
 
@@ -230,6 +237,9 @@ exec autotiling
 
 # Start PipeWire (WirePlumber)
 exec gentoo-pipewire-launcher
+
+# Start fcitx for input
+exec fcitx
 
 # Start XDG Desktop Portal
 exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
