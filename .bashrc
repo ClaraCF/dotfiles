@@ -35,6 +35,38 @@ complete -cf doas
 # I hate Cantv with all my heart
 alias cantv='until ping -c1 gentoo.org; do continue; done; printf "\a"'
 
+# Modo UCABobo
+function ucabobo() {
+    # if [ $(id -u) -ne 0 ]
+    # then
+    #     echo "[!] Must be run as root."
+    #     return 1
+    # fi
+
+    export ACTION="$1"
+
+    doas id 2>&1 > /dev/null
+
+    if [ "${ACTION}" == "on" ]
+    then
+        doas sed -i s'/^nameserver ::1/#&/' /etc/resolv.conf
+        doas sed -i s'/^nameserver 127.0.0.1/#&/' /etc/resolv.conf
+        doas sed -i s'/^#nameserver 9.9.9.9/nameserver 9.9.9.9/' /etc/resolv.conf
+        echo "Modo UCABobo: ACTIVADO"
+        return 0
+    elif [ "${ACTION}" == "off" ]
+    then
+        echo "Modo UCABobo: DESACTIVADO"
+        doas sed -i s'/^nameserver 9.9.9.9/#&/' /etc/resolv.conf
+        doas sed -i s'/^#nameserver ::1/nameserver ::1/' /etc/resolv.conf
+        doas sed -i s'/^#nameserver 127.0.0.1/nameserver 127.0.0.1/' /etc/resolv.conf
+        return 0
+    else
+        echo "[!] Invalid mode -- '${ACTION}'"
+        return 1
+    fi
+}
+
 # Starship prompt
 eval "$(starship init bash)"
 
