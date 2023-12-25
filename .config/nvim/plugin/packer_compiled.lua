@@ -149,11 +149,6 @@ _G.packer_plugins = {
     path = "/home/clara/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
-  ["nvim-treesitter"] = {
-    loaded = true,
-    path = "/home/clara/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/clara/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -168,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/clara/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["pandoc.nvim"] = {
+    loaded = true,
+    path = "/home/clara/.local/share/nvim/site/pack/packer/start/pandoc.nvim",
+    url = "https://github.com/aspeddro/pandoc.nvim"
   },
   ["rust-tools.nvim"] = {
     loaded = true,
@@ -203,10 +203,20 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/clara/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  vimwiki = {
+    config = { '\27LJ\2\nÊ\2\0\0\3\0\5\0\v6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0006\0\0\0009\0\1\0)\1\0\0=\1\4\0K\0\1\0\23vimwiki_global_ext\1\0\t#html_filename_parameterization\3\1\14path_html\29~/Documents/Vimwiki/HTML\bext\b.md\tpath\24~/Documents/Vimwiki\vsyntax\rmarkdown\17template_ext\t.tpl\21custom_wiki2html\21vimwiki_markdown\21template_default\fdefault\18template_path"~/Documents/Vimwiki/Templates\17vimwiki_list\6g\bvim\0' },
+    loaded = true,
+    path = "/home/clara/.local/share/nvim/site/pack/packer/start/vimwiki",
+    url = "https://github.com/vimwiki/vimwiki"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: vimwiki
+time([[Config for vimwiki]], true)
+try_loadstring('\27LJ\2\nÊ\2\0\0\3\0\5\0\v6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0006\0\0\0009\0\1\0)\1\0\0=\1\4\0K\0\1\0\23vimwiki_global_ext\1\0\t#html_filename_parameterization\3\1\14path_html\29~/Documents/Vimwiki/HTML\bext\b.md\tpath\24~/Documents/Vimwiki\vsyntax\rmarkdown\17template_ext\t.tpl\21custom_wiki2html\21vimwiki_markdown\21template_default\fdefault\18template_path"~/Documents/Vimwiki/Templates\17vimwiki_list\6g\bvim\0', "config", "vimwiki")
+time([[Config for vimwiki]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

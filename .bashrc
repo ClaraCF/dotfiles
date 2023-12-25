@@ -67,6 +67,10 @@ function ucabobo() {
     fi
 }
 
+# Use fish in place of bash
+# keep this line at the bottom of ~/.bashrc
+[ -x /bin/fish ] && [ -z "$IN_NIX_SHELL" ] && SHELL=/bin/fish exec fish
+
 # Starship prompt
-eval "$(starship init bash)"
+#eval "$(starship init bash)"
 

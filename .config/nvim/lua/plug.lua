@@ -37,7 +37,7 @@ return require('packer').startup(function()
     use 'vim-airline/vim-airline-themes'
 
     -- Tree Sitter --
-    use 'nvim-treesitter/nvim-treesitter'
+    --use 'nvim-treesitter/nvim-treesitter'
 
     -- Other --
     use 'voldikss/vim-floaterm'
