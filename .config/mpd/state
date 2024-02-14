@@ -1,0 +1,28 @@
+sw_volume: 98
+audio_device_state:1:PipeWire Sound Server
+audio_device_state:1:Music Visualizer
+state: stop
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 5
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:No Phun Intended/Tyler Joseph - Going Down-tfaGt1bxX1E.opus
+1:My Chemical Romance/The Black Parade/The End..opus
+2:My Chemical Romance/The Black Parade/Dead!.opus
+3:My Chemical Romance/The Black Parade/This Is How I Disappear.opus
+4:My Chemical Romance/The Black Parade/The Sharpest Lives.opus
+5:My Chemical Romance/The Black Parade/Welcome to the Black Parade.opus
+6:My Chemical Romance/The Black Parade/I Don_t Love You.opus
+7:My Chemical Romance/The Black Parade/House of Wolves.opus
+8:My Chemical Romance/The Black Parade/Cancer.opus
+9:My Chemical Romance/The Black Parade/Mama.opus
+10:My Chemical Romance/The Black Parade/Sleep.opus
+11:My Chemical Romance/The Black Parade/Teenagers.opus
+12:My Chemical Romance/The Black Parade/Disenchanted.opus
+13:My Chemical Romance/The Black Parade/Famous Last Words.opus
+14:My Chemical Romance/The Black Parade/Blood (Hidden Track).opus
+playlist_end
