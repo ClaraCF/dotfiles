@@ -36,7 +36,7 @@ set -x LESSHISTFILE "-" # Disable history
 set -x CARGO_HOME "$XDG_DATA_HOME/cargo"
 set -x GRADLE_USER_HOME "$XDG_DATA_HOME/gradle"
 set -x GNUPGHOME "$XDG_DATA_HOME/gnupg"
-set -x _JAVA_OPTIONS "-Djava.util.prefs.userRoot $XDG_CONFIG_HOME/java"
+set -x _JAVA_OPTIONS "-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
 set -x W3M_DIR "$XDG_STATE_HOME/w3m"
 set -x WGETRC "$XDG_CONFIG_HOME/wgetrc"
 set -x PYTHONPYCACHEPREFIX "$XDG_CACHE_HOME/python"

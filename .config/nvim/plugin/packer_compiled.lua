@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/clara/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/clara/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/clara/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/clara/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/clara/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/clara/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?.lua;/home/clara/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?/init.lua;/home/clara/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?.lua;/home/clara/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/clara/.cache/nvim/packer_hererocks/2.1.1702233742/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -205,7 +205,7 @@ _G.packer_plugins = {
     url = "https://github.com/hrsh7th/vim-vsnip"
   },
   vimwiki = {
-    config = { '\27LJ\2\nÊ\2\0\0\3\0\5\0\v6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0006\0\0\0009\0\1\0)\1\0\0=\1\4\0K\0\1\0\23vimwiki_global_ext\1\0\t#html_filename_parameterization\3\1\14path_html\29~/Documents/Vimwiki/HTML\bext\b.md\tpath\24~/Documents/Vimwiki\vsyntax\rmarkdown\17template_ext\t.tpl\21custom_wiki2html\21vimwiki_markdown\21template_default\fdefault\18template_path"~/Documents/Vimwiki/Templates\17vimwiki_list\6g\bvim\0' },
+    config = { '\27LJ\2\nÊ\2\0\0\3\0\5\0\v6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0006\0\0\0009\0\1\0)\1\0\0=\1\4\0K\0\1\0\23vimwiki_global_ext\1\0\t\17template_ext\t.tpl\21template_default\fdefault\tpath\24~/Documents/Vimwiki\18template_path"~/Documents/Vimwiki/Templates#html_filename_parameterization\3\1\21custom_wiki2html\21vimwiki_markdown\14path_html\29~/Documents/Vimwiki/HTML\bext\b.md\vsyntax\rmarkdown\17vimwiki_list\6g\bvim\0' },
     loaded = true,
     path = "/home/clara/.local/share/nvim/site/pack/packer/start/vimwiki",
     url = "https://github.com/vimwiki/vimwiki"
@@ -215,7 +215,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: vimwiki
 time([[Config for vimwiki]], true)
-try_loadstring('\27LJ\2\nÊ\2\0\0\3\0\5\0\v6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0006\0\0\0009\0\1\0)\1\0\0=\1\4\0K\0\1\0\23vimwiki_global_ext\1\0\t#html_filename_parameterization\3\1\14path_html\29~/Documents/Vimwiki/HTML\bext\b.md\tpath\24~/Documents/Vimwiki\vsyntax\rmarkdown\17template_ext\t.tpl\21custom_wiki2html\21vimwiki_markdown\21template_default\fdefault\18template_path"~/Documents/Vimwiki/Templates\17vimwiki_list\6g\bvim\0', "config", "vimwiki")
+try_loadstring('\27LJ\2\nÊ\2\0\0\3\0\5\0\v6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0006\0\0\0009\0\1\0)\1\0\0=\1\4\0K\0\1\0\23vimwiki_global_ext\1\0\t\17template_ext\t.tpl\21template_default\fdefault\tpath\24~/Documents/Vimwiki\18template_path"~/Documents/Vimwiki/Templates#html_filename_parameterization\3\1\21custom_wiki2html\21vimwiki_markdown\14path_html\29~/Documents/Vimwiki/HTML\bext\b.md\vsyntax\rmarkdown\17vimwiki_list\6g\bvim\0', "config", "vimwiki")
 time([[Config for vimwiki]], false)
 
 _G._packer.inside_compile = false

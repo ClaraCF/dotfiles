@@ -23,7 +23,7 @@ alias lt="ls --tree"
 
 # Helper aliases
 alias battery="cat /sys/class/power_supply/BAT?/capacity"
-alias yt="youtube-dl --add-metadata -i"
+alias yt="yt-dlp --add-metadata -i"
 alias yta="yt -x -f bestaudio/best"
 
 # Dotfiles

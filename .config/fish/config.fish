@@ -5,6 +5,24 @@
 # |_|   |_|___/_| |_|  \____\___/|_| |_|_| |_|\__, |
 #                                             |___/ 
 
+function ucabobo
+    switch "$argv[1]"
+    case "on"
+        doas ln -sf /etc/systemd/ucab_resolved.conf /etc/systemd/resolved.conf
+        and doas systemctl restart systemd-resolved.service
+        and echo "Modo ucabobo: ACTIVADO"
+
+    case "off"
+        doas ln -sf /etc/systemd/clara_resolved.conf /etc/systemd/resolved.conf
+        and doas systemctl restart systemd-resolved.service
+        and echo "Modo ucabobo: DESACTIVADO"
+
+    case "*"
+        echo "Opción inválida"
+    end
+end 
+
+
 if status is-interactive
     # Disable greeting
     set -x fish_greeting

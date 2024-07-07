@@ -269,6 +269,8 @@ French:fr:French (BEPO):bepo:
 French:fr:French (BEPO, Latin-9 only):bepo_latin9:
 French:fr:French (BEPO, AFNOR):bepo_afnor:
 French:fr:French (Dvorak):dvorak:
+French:fr:‑L):ergol:
+French:fr:‑L, ISO variant):ergol_iso:
 French:fr:French (Macintosh):mac:
 French:fr:French (US):us:
 French:fr:Breton (France):bre:
@@ -338,7 +340,6 @@ German (Switzerland):ch:German (Switzerland, Sun Type 6/7):sun_type6_de:
 German (Switzerland):ch:French (Switzerland, Sun Type 6/7):sun_type6_fr:
 Greek:gr:
 Greek:gr:Greek (simple):simple:
-Greek:gr:Greek (extended):extended:
 Greek:gr:Greek (no dead keys):nodeadkeys:
 Greek:gr:Greek (polytonic):polytonic:
 Greek:gr:Greek (Sun Type 6/7):sun_type6:
@@ -369,8 +370,9 @@ Hungarian:hu:Hungarian (QWERTY, 102-key, comma, dead keys):102_qwerty_comma_dead
 Hungarian:hu:Hungarian (QWERTY, 102-key, comma, no dead keys):102_qwerty_comma_nodead:
 Hungarian:hu:Hungarian (QWERTY, 102-key, dot, dead keys):102_qwerty_dot_dead:
 Hungarian:hu:Hungarian (QWERTY, 102-key, dot, no dead keys):102_qwerty_dot_nodead:
-Hungarian:hu:Old Hungarian:oldhun:
 Hungarian:hu:Old Hungarian (for ligatures):oldhunlig:
+Hungarian:hu:Old Hungarian (Carpathian Highlands, S as Sh):oldhun_sk_sh:
+Hungarian:hu:Old Hungarian (Carpathian Highlands, S as Sz):oldhun_sk_sz:
 Hungarian:hu:Hungarian (US):us:
 Icelandic:is:
 Icelandic:is:Icelandic (Macintosh, legacy):mac_legacy:
@@ -439,7 +441,6 @@ Italian:it:Italian (Windows):winkeys:
 Italian:it:Italian (Macintosh):mac:
 Italian:it:Italian (US):us:
 Italian:it:Italian (IBM 142):ibm:
-Italian:it:Italian (intl., with dead keys):intl:
 Italian:it:Friulian (Italy):fur:
 Italian:it:Sicilian:scn:
 Italian:it:Georgian (Italy):geo:

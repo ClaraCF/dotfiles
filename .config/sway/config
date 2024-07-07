@@ -233,19 +233,22 @@ gaps outer 6
 default_border pixel 5
 
 # Enable autotiling
-exec autotiling
+exec autotiling-rs
 
 # Start PipeWire (WirePlumber)
-exec gentoo-pipewire-launcher
+#exec gentoo-pipewire-launcher
+#exec pipewire
+#exec pipewire-pulse
+#exec wireplumber
 
 # Start fcitx for input
 exec fcitx
 
 # Start XDG Desktop Portal
 exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-exec /usr/libexec/xdg-desktop-portal-gtk -r
-exec /usr/libexec/xdg-desktop-portal-wlr -r
-exec /usr/libexec/flatpak-portal -r
+exec /usr/lib/xdg-desktop-portal-gtk -r
+exec /usr/lib/xdg-desktop-portal-wlr -r
+#exec /usr/libexec/flatpak-portal -r
 exec "sh -c 'sleep 5;exec /usr/libexec/xdg-desktop-portal -r'"
 
 for_window [app_id="org.keepassxc.KeePassXC"] floating enable

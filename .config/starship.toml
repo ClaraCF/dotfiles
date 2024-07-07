@@ -15,6 +15,9 @@ disabled = true
 [rust]
 disabled = true
 
+[c]
+disabled = true
+
 [nodejs]
 disabled = true
 

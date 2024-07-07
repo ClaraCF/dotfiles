@@ -22,9 +22,6 @@ vim.opt.relativenumber = true
 -- Other configs --
 vim.opt.termguicolors = true
 
--- Load Plug-ins --
-require('plug')
-
 -- Plug-ins configs --
 vim.g.airline_powerline_fonts = 1
 vim.g.airline_theme = 'deus'
@@ -37,6 +34,9 @@ require('onedark').setup {
     style = 'warmer'
 }
 require('onedark').load()
+
+-- Load Plug-ins --
+require('plug')
 
 -- Set up Comment.nvim --
 require('Comment').setup()
@@ -192,7 +192,5 @@ vim.g.vimwiki_global_ext = 0
 
 require('opts')
 require('keys')
-
--- require('gitsigns').setup()
 
 --require('pandoc').setup()

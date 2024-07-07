@@ -3,6 +3,12 @@ return require('packer').startup(function()
     -- Package Manager --
     use 'wbthomason/packer.nvim'	-- Packer
 
+    -- Discord Rich Presence --
+    use 'andweeb/presence.nvim'
+
+    -- Git Signs --
+    use 'lewis6991/gitsigns.nvim'
+
     -- Mason LSP server, debugger and linter Manager --
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
