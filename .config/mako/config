@@ -1,0 +1,21 @@
+# GLOBAL
+#sort=+time
+layer=overlay
+markup=1
+
+# STYLE
+font=FiraMonoNerdFont 14
+width=300
+margin=5,18,0
+padding=7
+border-size=1
+border-radius=10
+progress-color=#ffffff
+max-icon-size=100
+#icon-path=/usr/share/icons/WhiteSur-dark:/usr/share/icons/WhiteSur:/usr/share/icons/Adwaita:/usr/share/icons/hicolor
+icon-location=right
+#format=%b
+text-alignment=left
+anchor=top-right
+
+default-timeout=3400
