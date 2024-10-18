@@ -1,0 +1,5 @@
+[screencast]
+chooser_cmd=slurp -f %o -or
+#chooser_cmd=/home/clara/test.sh
+chooser_type=simple
+max_fps=60
