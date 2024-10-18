@@ -1,0 +1,13 @@
+set previewer ~/.config/lf/bin/previewer.sh
+set cleaner ~/.config/lf/bin/cleaner.sh
+set preview true
+set hidden true
+set drawbox true
+set ignorecase true
+
+cmd SetWallpaper ${{
+    cp "$f" ~/.config/sway/wallpaper
+    swaymsg output '*' bg ~/.config/sway/wallpaper fill
+}}
+
+map w SetWallpaper
