@@ -44,6 +44,9 @@ if status is-interactive
     set -x COLORTERM truecolor
     set -x TERM xterm-kitty
 
+    # Arduino completion
+    source (arduino-cli completion fish | psub)
+
     # Use starship prompt
     source (/usr/bin/starship init fish --print-full-init | psub)
 end

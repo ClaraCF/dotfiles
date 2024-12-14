@@ -64,8 +64,7 @@ set -x MOZ_ENABLE_WAYLAND 1	# Firefox
 
 # Fix the Java reparenting issue
 set -x _JAVA_AWT_WM_NONREPARENTING 1
-set -x JAVA_HOME "/usr/lib/jvm/openjdk-bin-17"
-
+set -x JAVA_HOME "/usr/lib/jvm/java-17-openjdk"
 
 # Keyboard input method
 set -x XMODIFIERS @im fcitx
