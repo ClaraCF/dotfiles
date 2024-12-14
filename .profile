@@ -40,7 +40,6 @@ export HISTFILE="${XDG_DATA_HOME}/bash/history"
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 export GRADLE_USER_HOME="${XDG_DATA_HOME}/gradle"
 export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
-export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java"
 export W3M_DIR="${XDG_STATE_HOME}/w3m"
 export WGETRC="${XDG_CONFIG_HOME}/wgetrc"
 export PYTHONPYCACHEPREFIX="${XDG_CACHE_HOME}/python"
@@ -67,7 +66,10 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export MOZ_ENABLE_WAYLAND=1	# Firefox
 
 # Fix the Java reparenting issue
+# And other Java stuff
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
 export _JAVA_AWT_WM_NONREPARENTING=1
+export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java"
 
 
 # Keyboard input method
