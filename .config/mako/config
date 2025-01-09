@@ -1,21 +1,36 @@
-# GLOBAL
-#sort=+time
+### GLOBAL ###
 layer=overlay
 markup=1
 
-# STYLE
+### STYLE ###
 font=FiraMonoNerdFont 14
-width=300
-margin=5,18,0
-padding=7
-border-size=1
+width=350
+#margin=5,18,0
+padding=10
+border-size=4
 border-radius=10
 progress-color=#ffffff
 max-icon-size=100
 #icon-path=/usr/share/icons/WhiteSur-dark:/usr/share/icons/WhiteSur:/usr/share/icons/Adwaita:/usr/share/icons/hicolor
 icon-location=right
-#format=%b
 text-alignment=left
 anchor=top-right
-
 default-timeout=3400
+
+### Colors ###
+background-color=#303446
+text-color=#c6d0f5
+border-color=#85c1dc
+progress-color=over #414559
+
+[urgency=high]
+border-color=#ef9f76
+
+[summary~="Web Scrobbler.*"]
+invisible=1
+on-notify=exec ~/Documents/scripts/scrobble_notification.sh
+
+
+[category="Music"]
+format=<b>%s</b>\n%b
+default-timeout=4200
