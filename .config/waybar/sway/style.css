@@ -1,0 +1,205 @@
+@import "mocha.css";
+
+/* ----- General ----- */
+
+* {
+    font-family: FantasqueSansMono Nerd Font;
+    font-size: 16px;
+    min-height: 0;
+}
+
+#waybar {
+    background: transparent;
+    color: @text;
+    margin: 0rem;
+}
+
+/* ------------------- */
+
+
+/* ----- Groups ----- */
+
+#custom-music {
+    background-color: @surface0;
+    border-radius: 1rem;
+    margin: 1rem 0.5rem 0rem 0.5rem;
+    padding: 0rem 1rem;
+}
+
+#sysinfo {
+    background-color: @surface0;
+    border-radius: 1rem;
+    margin: 1rem 0.5rem 0rem 0.5rem;
+    padding: 0rem 0.5rem 0rem 0rem;
+}
+
+#sway {
+    background-color: @surface0;
+    border-radius: 1rem;
+    margin: 1rem 0.5rem 0rem 1rem;
+    padding: 0rem 1rem;
+}
+
+#tray {
+    background-color: @surface0;
+    border-radius: 1rem;
+    margin: 1rem 1rem 0rem 0.5rem;
+    padding: 0rem 1rem;
+}
+
+#privacy {
+    background-color: @red;
+    border-radius: 1rem;
+    margin: 1rem 0.5rem 0rem 0.5rem;
+    padding: 0rem 1rem;
+}
+
+#custom-music {
+    color: @mauve;
+}
+
+#sysmon {
+    background-color: @surface0;
+    border-radius: 1rem;
+    margin: 1rem 0.5rem 0rem 0.5rem;
+    padding: 0rem 1rem;
+}
+
+/* ------------------ */
+
+
+/* ----- Sway Group ----- */
+#scratchpad {
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+}
+
+#mode {
+    background-color: @surface1;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0rem 0.5rem;
+}
+
+#workspaces button {
+    color: @lavender;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+#workspaces button.active {
+    color: @sky;
+    border-radius: 1rem;
+}
+
+#workspaces button.urgent {
+    color: @red;
+    border-radius: 1rem;
+}
+
+#workspaces button:hover {
+    color: @sapphire;
+    border-radius: 1rem;
+}
+
+/* ---------------------- */
+
+
+/* ----- Sysmon Group ----- */
+
+#cpu {
+    color: @sapphire;
+    padding-right: 1rem;
+}
+
+#memory {
+    color: @pink;
+}
+
+/* ------------------------ */
+
+
+#backlight,
+#network,
+#clock,
+#battery,
+#pulseaudio,
+#custom-lock,
+#custom-power {
+    padding: 0rem 1rem;
+    margin: 0rem 0rem 0rem 0rem;
+}
+
+#network {
+    color: @sapphire;
+}
+
+#network.disconnected,
+#network.disabled {
+    color: @red;
+}
+
+#clock {
+    color: @blue;
+}
+
+#battery {
+    color: @green;
+}
+
+#battery.charging {
+    color: @green;
+}
+
+@keyframes blink {
+    to {
+        background-color: @red;
+        color: @crust;
+    }
+}
+
+#battery.warning:not(.charging) {
+    color: @red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#backlight {
+    color: @yellow;
+}
+
+#backlight, #battery {
+    border-radius: 0;
+}
+
+#idle_inhibitor {
+    color: @white;
+    border-radius: 1rem 0rem 0rem 1rem;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+#idle_inhibitor.activated {
+    background-color: @surface1;
+    color: @white;
+    border-radius: 1rem 0rem 0rem 1rem;
+    padding: 0rem 1.4rem 0rem 1rem;
+    margin: 0rem 0.5rem 0rem 0rem;
+}
+
+#pulseaudio {
+    color: @maroon;
+}
+
+#custom-lock {
+    border-radius: 1rem 0px 0px 1rem;
+    color: @lavender;
+}
+
+#custom-power {
+    margin-right: 1rem;
+    border-radius: 0px 1rem 1rem 0px;
+    color: @red;
+}

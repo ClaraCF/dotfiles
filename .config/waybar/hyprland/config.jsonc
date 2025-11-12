@@ -1,0 +1,181 @@
+{
+    // Properties of the bar itself
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+
+    // Choose the order of the modules
+    "modules-left": ["group/hyprland", "group/sysmon", "privacy"],
+    "modules-center": ["custom/music"],
+    "modules-right": ["group/sysinfo", "tray"],
+
+    "group/hyprland": {
+        "orientation": "horizontal",
+        "modules": ["hyprland/workspaces", "hyprland/submap"]//, "sway/scratchpad"]
+    },
+
+    "group/sysmon" : {
+        "orientation": "horizontal",
+        "modules": [
+            "cpu",
+            "memory"
+        ]
+    },
+
+    "group/sysinfo": {
+        "orientation": "horizontal",
+        "modules": ["idle_inhibitor", "pulseaudio", "network", "backlight", "battery", "clock"]
+
+    },
+
+    "cpu": {
+        "format": "<big></big>   {usage}%",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "<big></big>   {}%"
+    },
+
+    "privacy": {
+        "icon-spacing": 4,
+        "icon-size": 18,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            }
+        ]
+    },
+
+
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "*": 10
+        },
+        "show-special": true,
+        "disable-scroll": true,
+        "sort-by-name": true,
+        "format": "<big>{icon}</big>",
+        "format-icons": {
+            "default": "",
+            "urgent": "",
+            "active": "",
+            "empty": "—",
+            "special": " "
+        }
+    },
+
+    "hyprland/submap": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "hyprland/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": [" "],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+
+    "custom/music": {
+        "format": "   {}",
+        "tooltip-format": "{}",
+        "escape": true,
+        "interval": 5,
+        "tooltip": true,
+        "exec": "playerctl metadata --format='{{ title }}'",
+        "on-click": "playerctl play-pause",
+        "max-length": 50
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    "clock": {
+        "timezone": "America/Caracas",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "<big> </big>{:%d/%m/%Y}",
+        "format": "<big> </big>{:%H:%M}"
+    },
+
+    "network": {
+        "format-wifi": "<big>{icon}</big>   {essid} ({signalStrength}%)",
+        "format-ethernet": "<big>{icon}</big>   {essid}",
+        "format-disconnected": "<big>{icon}</big>   Disconnected",
+        "format-icons" : {
+            "wifi": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+            "ethernet": "󰈀",
+            "disconnected": "󰤮"
+        }
+    },
+
+    "backlight": {
+        "tooltip-format": "Brightness at {percent}%",
+        "format": "<big>{icon}</big>  {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "<big>{icon}</big> {capacity}%",
+        "format-charging": "<big>󰂄</big> <big>󰚥</big> {capacity}%",
+        "format-plugged": "<big>󰚥</big> Plugged",
+        "format-alt": "{icon}",
+        "format-icons": ["󰁺" ,"󰁻" ,"󰁼" ,"󰁽" ,"󰁾" ,"󰁿" ,"󰂀" ,"󰂁" ,"󰂂" ,"󰁹"]
+    },
+
+    "pulseaudio": {
+        // Audio available
+        "format": "<big>{icon}</big>  {volume}%",
+        "format-bluetooth": "<big>{icon}</big>  <big>󰂰</big>   {volume}%",
+
+        // Audio is muted
+        "format-muted": "   Muted",
+        "format-bluetooth-muted": "<big>{icon}</big>  <big>󰂯</big>  Muted",
+
+        // Icons
+        "format-icons": {
+            // Default
+            "default": [" ", " ", " "],
+
+            // Headphones
+            "headphones": ["󰋋"],
+            "headphones-muted": ["󰟎"],
+            "headset": ["󰋋"],
+            "headset-muted": ["󰟎"],
+
+            // Speaker
+            //"speaker": ["󰓃"],
+            //"speaker-muted": ["󰓄"],
+
+            // Phone
+            "phone":[""],
+            "phone-muted":[""],
+
+            // Car
+            "car": [""],
+            "car-muted": ["󰸜"]
+        },
+        "on-click": "pavucontrol"
+    }
+}

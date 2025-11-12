@@ -1,0 +1,24 @@
+@import "mocha.css";
+
+#sway {
+    border-radius: 1rem;
+    margin: 5px;
+    background-color: @surface0;
+    margin-left: 1rem;
+}
+
+
+#privacy {
+    background-color: @red;
+    margin: 5px;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+
+#sysmon {
+    border-radius: 1rem;
+    background-color: @surface0;
+    margin: 5px;
+}
+
