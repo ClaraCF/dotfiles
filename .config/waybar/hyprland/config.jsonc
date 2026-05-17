@@ -10,10 +10,13 @@
 
     "group/hyprland": {
         "orientation": "horizontal",
-        "modules": ["hyprland/workspaces", "hyprland/submap"]//, "sway/scratchpad"]
+        "modules": ["hyprland/workspaces", "hyprland/submap"]
     },
 
     "group/sysmon" : {
+        // HACK: Temporary fix for scrolling crash
+        "on-scroll-up": "true",
+        "on-scroll-down": "true",
         "orientation": "horizontal",
         "modules": [
             "cpu",
@@ -28,15 +31,23 @@
     },
 
     "cpu": {
-        "format": "<big></big>   {usage}%",
-        "tooltip": false
+        // HACK: Temporary fix for scrolling crash
+        "on-scroll-up": "true",
+        "on-scroll-down": "true",
+        "format": "<big></big>   {usage}%"
     },
 
     "memory": {
-        "format": "<big></big>   {}%"
+        // HACK: Temporary fix for scrolling crash
+        "on-scroll-up": "true",
+        "on-scroll-down": "true",
+        "format": "<big></big>   {percentage}%"
     },
 
     "privacy": {
+        // HACK: Temporary fix for scrolling crash
+        "on-scroll-up": "true",
+        "on-scroll-down": "true",
         "icon-spacing": 4,
         "icon-size": 18,
         "transition-duration": 250,
@@ -56,11 +67,14 @@
 
 
     "hyprland/workspaces": {
+        // HACK: Temporary fix for scrolling crash
+        "on-scroll-up": "true",
+        "on-scroll-down": "true",
         "persistent-workspaces": {
             "*": 10
         },
         "show-special": true,
-        "disable-scroll": true,
+        "disable-scroll": false,
         "sort-by-name": true,
         "format": "<big>{icon}</big>",
         "format-icons": {
@@ -73,15 +87,10 @@
     },
 
     "hyprland/submap": {
+        // HACK: Temporary fix for scrolling crash
+        "on-scroll-up": "true",
+        "on-scroll-down": "true",
         "format": "<span style=\"italic\">{}</span>"
-    },
-
-    "hyprland/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": [" "],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
     },
 
     "tray": {
@@ -90,7 +99,7 @@
     },
 
     "custom/music": {
-        "format": "   {}",
+        "format": " {}",
         "tooltip-format": "{}",
         "escape": true,
         "interval": 5,
@@ -101,6 +110,9 @@
     },
 
     "idle_inhibitor": {
+        // HACK: Temporary fix for scrolling crash
+        "on-scroll-up": "true",
+        "on-scroll-down": "true",
         "format": "{icon}",
         "format-icons": {
             "activated": "",
@@ -116,6 +128,9 @@
     },
 
     "network": {
+        // HACK: Temporary fix for scrolling crash
+        "on-scroll-up": "true",
+        "on-scroll-down": "true",
         "format-wifi": "<big>{icon}</big>   {essid} ({signalStrength}%)",
         "format-ethernet": "<big>{icon}</big>   {essid}",
         "format-disconnected": "<big>{icon}</big>   Disconnected",
@@ -133,6 +148,9 @@
     },
 
     "battery": {
+        // HACK: Temporary fix for scrolling crash
+        "on-scroll-up": "true",
+        "on-scroll-down": "true",
         "states": {
             "warning": 30,
             "critical": 15
