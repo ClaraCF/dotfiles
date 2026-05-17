@@ -13,20 +13,20 @@ set -x XDG_CACHE_HOME "$HOME/.cache"
 set -x XDG_CONFIG_HOME "$HOME/.config"
 
 # XDG Environment Variables
-set -x XDG_CURRENT_DESKTOP sway
+#set -x XDG_CURRENT_DESKTOP sway
 
 
 # Environment variables
-set -x WM "sway"
+set -x WM "hyprland"
 set -x BROWSER "librewolf"
 set -x EDITOR "nvim"
 set -x READER "zathura"
 set -x VISUAL "nvim"
-set -x CODEEDITOR "vscodium"
+set -x CODEEDITOR "nvim"
 set -x TERMINAL "kitty"
 set -x COLORTERM "truecolor"
 set -x TERM "xterm-kitty"
-set -x SHELL "/bin/bash"
+set -x SHELL "/bin/fish"
 set -x PAGER "less"
 
 
@@ -54,6 +54,7 @@ set -x MINISIGN_CONFIG_DIR "$XDG_DATA_HOME/minisign"
 # XDG Base Directory aliases
 alias monerod "monerod --data-dir '$XDG_DATA_HOME/bitmonero'"
 alias irssi "irssi --config '$XDG_CONFIG_HOME/irssi/config' --home '$XDG_DATA_HOME/irssi'"
+alias arduino-cli "arduino-cli --config-file '$XDG_CONFIG_HOME/arduino15/arduino-cli.yaml'"
 
 
 # Make Qt themes work
@@ -64,10 +65,13 @@ set -x MOZ_ENABLE_WAYLAND 1	# Firefox
 
 # Fix the Java reparenting issue
 set -x _JAVA_AWT_WM_NONREPARENTING 1
-set -x JAVA_HOME "/usr/lib/jvm/java-17-openjdk"
+set -x JAVA_HOME "/usr/lib/jvm/default"
 
 # Keyboard input method
 set -x XMODIFIERS @im fcitx
 set -x QT_IM_MODULE fcitx
 set -x GTK_IM_MODULE fcitx 
 
+# Encore
+set -x ENCORE_INSTALL "/home/clara/.encore"
+set -x PATH "$ENCORE_INSTALL/bin:$PATH"
