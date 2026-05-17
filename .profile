@@ -17,20 +17,20 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_CONFIG_HOME="${HOME}/.config"
 
 # XDG Environment Variables
-export XDG_CURRENT_DESKTOP=sway
+#export XDG_CURRENT_DESKTOP=sway
 
 
 # Environment variables
-export WM="sway"
+export WM="hyprland"
 export BROWSER="librewolf"
 export EDITOR="nvim"
 export READER="zathura"
 export VISUAL="nvim"
-export CODEEDITOR="vscodium"
+export CODEEDITOR="nvim"
 export TERMINAL="kitty"
 export COLORTERM="truecolor"
 export TERM="xterm-kitty"
-export SHELL="/bin/bash"
+export SHELL="/bin/fish"
 export PAGER="less"
 
 
@@ -67,7 +67,7 @@ export MOZ_ENABLE_WAYLAND=1	# Firefox
 
 # Fix the Java reparenting issue
 # And other Java stuff
-export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
+export JAVA_HOME="/usr/lib/jvm/default"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java"
 

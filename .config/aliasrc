@@ -32,3 +32,11 @@ alias dotfiles='git --git-dir=$HOME/Documents/dotfiles --work-tree=$HOME'
 # Portage and Gentoo maintenance
 alias menuconf="sudo ~/Documents/scripts/configure_kernel.sh menuconf"
 alias buildkernel="sudo ~/Documents/scripts/configure_kernel.sh buildkernel"
+
+# Lol
+alias wokefetch="hyfetch --june"
+
+# XDG Base Directory aliases
+#alias monerod "monerod --data-dir '$XDG_DATA_HOME/bitmonero'"
+#alias irssi "irssi --config '$XDG_CONFIG_HOME/irssi/config' --home '$XDG_DATA_HOME/irssi'"
+#alias arduino-cli "arduino-cli --config-file '$XDG_CONFIG_HOME/arduino15/arduino-cli.yaml'"

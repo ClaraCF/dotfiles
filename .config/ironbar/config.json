@@ -1,8 +1,79 @@
 {
-  "position": "bottom",
-  "height": 42,
-  "start": [],
-  "center": [],
-  "end": []
+    "position": "top",
+    "height": 45,
+    "start": [
+        {
+            "type": "workspaces",
+            "favorites": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+            "all_monitors": true
+        },
+        {
+            "format": [
+                " {cpu_percent}%",
+                " {memory_percent}%"
+            ],
+            "interval": {
+                "cpu": 5,
+                "memory": 10
+            },
+            "type": "sys_info"
+        }
+    ],
+    "center": [
+        {
+            "type": "music",
+            "player_type": "mpris",
+            "format": "{title} / {artist}",
+            "truncate": "end",
+            "icons": {
+                "play": "",
+                "pause": ""
+            },
+            "music_dir": "/home/clara/Music"
+        }
+    ],
+    "end": [
+        {
+            "type": "volume",
+            "format": "{icon} {percentage}%",
+            "max_volume": 100,
+            "truncate": "middle",
+            "icons": {
+                "volume_high": "󰕾",
+                "volume_medium": "󰖀",
+                "volume_low": "󰕿",
+                "muted": "󰝟"
+            }
+        },
+        {
+            "type": "script",
+            "cmd": "/home/clara/.config/ironbar/bin/get_network_name.sh",
+            "mode": "poll",
+            "interval": 5000
+        },
+        {
+            "type": "script",
+            "cmd": "/home/clara/.config/ironbar/bin/get_brightness.sh",
+            "mode": "poll",
+            "interval": 5000
+        },
+        {
+            "type": "battery",
+            "format": "{percentage}%",
+            "thresholds": {
+                "warning": 25,
+                "critical": 15
+            }
+        },
+        {
+            "type": "clock",
+            "format": "%H:%M"
+        },
+        {
+            "type": "tray",
+            "direction": "horizontal",
+            "icon_size": 20
+        }
+    ]
 }
 

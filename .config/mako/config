@@ -2,9 +2,11 @@
 layer=overlay
 markup=1
 
+
 ### STYLE ###
 font=FiraMonoNerdFont 14
 width=350
+height=150
 #margin=5,18,0
 padding=10
 border-size=4
@@ -17,20 +19,30 @@ text-alignment=left
 anchor=top-right
 default-timeout=3400
 
+
 ### Colors ###
 background-color=#303446
 text-color=#c6d0f5
 border-color=#85c1dc
 progress-color=over #414559
 
+
 [urgency=high]
 border-color=#ef9f76
+
 
 [summary~="Web Scrobbler.*"]
 invisible=1
 on-notify=exec ~/Documents/scripts/scrobble_notification.sh
 
 
+# Music, default width
 [category="Music"]
 format=<b>%s</b>\n%b
-default-timeout=4200
+default-timeout=5000
+
+# Music, 400 notification width
+[category="Music-400w"]
+width=400
+format=<b>%s</b>\n%b
+default-timeout=5000
